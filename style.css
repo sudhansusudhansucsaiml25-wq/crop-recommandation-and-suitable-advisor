@@ -1,0 +1,24 @@
+:root{--g:#1F4E37;--bg:#fafaf7;--card:#fff;--border:#e2e0d8;--text:#1c1c1a;--muted:#6b6a63;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#15150f;--card:#1e1e17;--border:#3a392f;--text:#f0efe8;--muted:#a3a295;}}
+:root[data-theme="dark"]{--bg:#15150f;--card:#1e1e17;--border:#3a392f;--text:#f0efe8;--muted:#a3a295;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;padding:1.2rem clamp(1rem,4vw,2.5rem) 3rem;padding-top:calc(1.2rem + env(safe-area-inset-top,0px));}
+h1{font-size:1.4rem;color:var(--g);margin:0 0 .2rem;}
+.sub{color:var(--muted);font-size:.9rem;margin:0 0 1.2rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem;margin-bottom:1rem;}
+.field{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.7rem .9rem;}
+.field label{font-size:.78rem;color:var(--muted);display:flex;justify-content:space-between;}
+.field input[type=range]{width:100%;margin-top:.3rem;}
+button{background:var(--g);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:.95rem;cursor:pointer;}
+button:active{transform:scale(.98);}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem;margin-top:1rem;}
+.crop-row{display:flex;align-items:center;gap:.6rem;margin:.4rem 0;}
+.crop-name{width:110px;font-size:.9rem;text-transform:capitalize;}
+.bar-bg{flex:1;background:var(--border);border-radius:6px;height:16px;overflow:hidden;}
+.bar-fill{height:100%;background:var(--g);}
+.pct{width:46px;text-align:right;font-size:.85rem;}
+.warn{background:#fff3cd;border:1px solid #e0c35c;color:#6b5400;border-radius:8px;padding:.6rem .8rem;font-size:.85rem;margin-top:.6rem;}
+[data-theme="dark"] .warn,:root:not([data-theme="light"]) .warn{background:#3a2f0a;border-color:#6b5400;color:#f0d97a;}
+.note{font-size:.85rem;color:var(--muted);margin-top:.4rem;}
+h3{font-size:1rem;margin:0 0 .6rem;}
+.scope{font-size:.78rem;color:var(--muted);margin-top:1.4rem;border-top:1px solid var(--border);padding-top:.8rem;}

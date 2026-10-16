@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crop Recommendation & Suitability Advisor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Crop Recommendation &amp; Suitability Advisor</h1>
+<p class="sub">Working prototype — recommendation logic running on a real sample of the Kaggle Crop Recommendation Dataset (10 crops shown here).</p>
+
+<div class="grid" id="inputs"></div>
+<button onclick="recommend()">Recommend crop</button>
+
+<div class="card" id="results" style="display:none">
+  <h3>Top matches</h3>
+  <div id="bars"></div>
+  <div id="disclaimer"></div>
+  <div class="note" id="fert"></div>
+</div>
+
+<div class="scope">Prototype note: classifier here is a lightweight distance-based model on a 10-crop real data sample, standing in for the Random Forest/SVM/Decision Tree/Naive Bayes comparison pipeline (in progress) on the full 22-crop, 2200-row dataset.</div>
+
+<script src="script.js"></script>
+</body>
+</html>
